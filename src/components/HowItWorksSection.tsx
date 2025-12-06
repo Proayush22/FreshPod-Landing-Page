@@ -9,7 +9,7 @@ const HowItWorksSection = () => {
     {
       number: "02",
       title: "Continuous Monitoring",
-      description: "The sensor wakes every 30-60 minutes to analyze VOC levels and detect early signs of spoilage.",
+      description: "The sensor wakes every few hours to analyze VOC levels and detect early signs of spoilage. The app updates everytime the sensor wakes.",
       status: "fresh" as const,
     },
     {
