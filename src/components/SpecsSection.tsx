@@ -1,4 +1,5 @@
 import { Cpu, Radio, Battery, Shield } from "lucide-react";
+import { motion } from "framer-motion";
 import techRender from "@/assets/tech-render.png";
 
 const specs = [
@@ -50,31 +51,47 @@ const SpecsSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-background to-card" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Technical <span className="text-gradient-fresh">Specifications</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Enterprise-grade technology in a compact, food-safe package
           </p>
-        </div>
+        </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Technical Render */}
-          <div className="relative flex justify-center">
+          <motion.div 
+            className="relative flex justify-center"
+            initial={{ opacity: 0, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
+          >
             <img 
               src={techRender} 
               alt="FreshPod internal components diagram" 
               className="w-full max-w-lg rounded-2xl"
             />
-          </div>
+          </motion.div>
 
           {/* Specs Grid */}
           <div className="grid sm:grid-cols-2 gap-6">
-            {specs.map((spec) => (
-              <div
+            {specs.map((spec, index) => (
+              <motion.div
                 key={spec.category}
                 className="p-6 rounded-2xl bg-card border border-border hover:border-fresh/30 transition-all duration-300"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-xl bg-fresh/10 border border-fresh/20 flex items-center justify-center">
@@ -91,7 +108,7 @@ const SpecsSection = () => {
                     </div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
