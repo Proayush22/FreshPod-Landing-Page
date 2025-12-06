@@ -143,8 +143,8 @@ const AppSection = () => {
               
             </div>            
             <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 24 24">
-                <path fill="#fafafa" d="M22.586,4.414L5.879,21.121C5.316,21.684,5,22.447,5,23.243V41c0,1.105,0.895,2,2,2h34 c1.105,0,2-0.895,2-2V23.243c0-0.796-0.316-1.559-0.879-2.121L25.414,4.414C24.633,3.633,23.367,3.633,22.586,4.414z"></path><path fill="#43a047" d="M12 35H36V43H12z"></path><path fill="#fbc02d" d="M13,24v19H7c-1.1,0-2-0.9-2-2V24H13z"></path><path fill="#1e88e5" d="M42.12,21.12L29.59,8.59l-5.55,5.55L35,25.1V43h6c1.1,0,2-0.9,2-2V23.24 C43,22.45,42.68,21.68,42.12,21.12z"></path><path fill="#e64a19" d="M29.59,8.59L5,33.18v-9.94c0-0.79,0.32-1.56,0.88-2.12L22.59,4.41c0.78-0.78,2.04-0.78,2.82,0 L29.59,8.59z"></path>
+              <svg className="w-6 h-6 text-foreground" viewBox="0 0 24 24" fill="currentColor">
+                <path xmlns="http://www.w3.org/2000/svg" d="M38.5357,42.2722H9.4643A3.9642,3.9642,0,0,1,5.5,38.3079V24.2127a3.9628,3.9628,0,0,1,1.1627-2.8046l14.5357-14.52a3.9629,3.9629,0,0,1,5.6032,0l14.5357,14.52A3.9628,3.9628,0,0,1,42.5,24.2127V38.3079A3.9642,3.9642,0,0,1,38.5357,42.2722ZM13.4286,34.3437H34.5714V25.8559L24,15.2956l-10.5714,10.56Z"/>             
               </svg>
               <div className="text-left">
                 <p className="text-[10px] text-muted-foreground">Works with</p>
