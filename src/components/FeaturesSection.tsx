@@ -16,13 +16,13 @@ const features = [
   {
     icon: Zap,
     title: "Energy Efficient",
-    description: "Intelligent sampling every 30-60 minutes conserves battery. Cold-weather optimized lithium batteries last up to 6 months.",
+    description: "Intelligent sampling every 6 hours conserves battery. Cold-weather optimized lithium batteries last up to 6 months.",
     color: "fresh" as const,
   },
   {
     icon: Droplets,
     title: "Food-Safe & Waterproof",
-    description: "IP67 rated with food-grade polypropylene casing. Wireless charging keeps the pod completely sealed.",
+    description: "50m water resistance with food-grade polypropylene casing. Wireless charging keeps the pod completely sealed.",
     color: "fresh" as const,
   },
 ];

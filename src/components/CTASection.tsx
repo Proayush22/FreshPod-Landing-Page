@@ -19,13 +19,13 @@ const CTASection = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="hero" className="group">
-              Pre-Order Now
+              Join Waitlist
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Button>
           </div>
           
           <p className="text-sm text-muted-foreground mt-6">
-            Expected shipping: Q2 2025 • 30-day money-back guarantee
+            Expected shipping: Q4 2026 • 30-day money-back guarantee
           </p>
         </div>
       </div>

@@ -22,6 +22,9 @@ const Navbar = () => {
             <a href="#specs" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
               Specs
             </a>
+            <a href="#app" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              Our App
+            </a>
           </div>
           
           <Button variant="default" size="sm">

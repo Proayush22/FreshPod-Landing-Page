@@ -134,24 +134,34 @@ const AppSection = () => {
           <div className="flex justify-center gap-4">
             <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
               <svg className="w-6 h-6 text-foreground" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M11.97 8.3c-2.45 0-5.18.9-7.1 2.45l-1.05-1.5c2.25-1.8 5.4-2.8 8.15-2.8 2.6 0 5.4 1 7.2 2.7l-1.15 1.55c-1.55-1.4-3.9-2.25-6.05-2.25zm-8.3 5.45c1.65-1.35 4.35-2.25 7-2.25 2.1 0 4.25.6 5.8 1.7l-1.15 1.55c-1.2-.85-2.85-1.3-4.65-1.3-2.05 0-4.15.7-5.4 1.75l-1.6-1.45zm3.7 3.05c1.35-.95 2.95-1.45 4.6-1.45 1.25 0 2.5.3 3.6.9l-1.1 1.55c-.75-.4-1.6-.6-2.5-.6-1.15 0-2.25.35-3.2 1l-1.4-1.4z"/>
+              </svg>
+              <div className="text-left">
+                <p className="text-[10px] text-muted-foreground">Works with</p>
+                <p className="text-foreground font-semibold text-sm">Alexa</p>
+              </div>
+            </div>            
+            <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
+              <svg className="w-6 h-6 text-foreground" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .533 5.333.533 12S5.867 24 12.48 24c3.44 0 6.053-1.147 8.16-3.293 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.12H12.48z"/>
+              </svg>
+              <div className="text-left">
+                <p className="text-[10px] text-muted-foreground">Works with</p>
+                <p className="text-foreground font-semibold text-sm">Google Home</p>
+              </div>
+            </div>      
+            <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
+              <svg className="w-6 h-6 text-foreground" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
               </svg>
               <div className="text-left">
-                <p className="text-[10px] text-muted-foreground">Download on the</p>
-                <p className="text-foreground font-semibold text-sm">App Store</p>
+                <p className="text-[10px] text-muted-foreground">Works with</p>
+                <p className="text-foreground font-semibold text-sm">Apple HomePod</p>
               </div>
-            </div>
-            <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
-              <svg className="w-6 h-6 text-foreground" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.198l2.807 1.626a1 1 0 010 1.73l-2.808 1.626L15.206 12l2.492-2.491zM5.864 2.658L16.8 8.99l-2.302 2.302-8.634-8.634z"/>
-              </svg>
-              <div className="text-left">
-                <p className="text-[10px] text-muted-foreground">Get it on</p>
-                <p className="text-foreground font-semibold text-sm">Google Play</p>
-              </div>
-            </div>
+            </div>    
           </div>
         </div>
+
       </div>
     </section>
   );

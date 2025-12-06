@@ -39,7 +39,7 @@ const HeroSection = () => {
             
             <div className="flex items-center gap-8 justify-center lg:justify-start pt-4 animate-slide-up" style={{ animationDelay: '0.3s' }}>
               <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">99.2%</p>
+                <p className="text-2xl font-bold text-foreground">90%+</p>
                 <p className="text-sm text-muted-foreground">Accuracy</p>
               </div>
               <div className="w-px h-10 bg-border" />
@@ -49,8 +49,8 @@ const HeroSection = () => {
               </div>
               <div className="w-px h-10 bg-border" />
               <div className="text-center">
-                <p className="text-2xl font-bold text-foreground">IP67</p>
-                <p className="text-sm text-muted-foreground">Waterproof</p>
+                <p className="text-2xl font-bold text-foreground">50m</p>
+                <p className="text-sm text-muted-foreground">Water Resistance</p>
               </div>
             </div>
           </div>
