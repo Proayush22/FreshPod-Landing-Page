@@ -133,12 +133,15 @@ const AppSection = () => {
           <p className="text-muted-foreground mb-4">Coming soon to iOS and Android</p>
           <div className="flex justify-center gap-4">
             <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
-              <svg className="w-6 h-6 text-foreground" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M11.97 8.3c-2.45 0-5.18.9-7.1 2.45l-1.05-1.5c2.25-1.8 5.4-2.8 8.15-2.8 2.6 0 5.4 1 7.2 2.7l-1.15 1.55c-1.55-1.4-3.9-2.25-6.05-2.25zm-8.3 5.45c1.65-1.35 4.35-2.25 7-2.25 2.1 0 4.25.6 5.8 1.7l-1.15 1.55c-1.2-.85-2.85-1.3-4.65-1.3-2.05 0-4.15.7-5.4 1.75l-1.6-1.45zm3.7 3.05c1.35-.95 2.95-1.45 4.6-1.45 1.25 0 2.5.3 3.6.9l-1.1 1.55c-.75-.4-1.6-.6-2.5-.6-1.15 0-2.25.35-3.2 1l-1.4-1.4z"/>
-              </svg>
-              <div className="text-left">
-                <p className="text-[10px] text-muted-foreground">Works with</p>
-                <p className="text-foreground font-semibold text-sm">Alexa</p>
+              <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-4">
+                {/* Alexa Brand Icon (Cyan Blue) */}
+                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11.97 8.3C9.52 8.3 6.79 9.2 4.87 10.75L3.82 9.25C6.07 7.45 9.22 6.45 11.97 6.45C14.57 6.45 17.37 7.45 19.17 9.15L18.02 10.7C16.47 9.3 14.12 8.45 11.97 8.3ZM3.67 13.75C5.32 12.4 8.02 11.5 10.67 11.5C12.77 11.5 14.92 12.1 16.47 13.2L15.32 14.75C14.12 13.9 12.47 13.45 10.67 13.45C8.62 13.45 6.52 14.15 5.27 15.2L3.67 13.75ZM7.37 16.8C8.72 15.85 10.32 15.35 11.97 15.35C13.22 15.35 14.47 15.65 15.57 16.25L14.47 17.8C13.72 17.4 12.87 17.2 11.97 17.2C10.82 17.2 9.72 17.55 8.77 18.2L7.37 16.8Z" fill="#00CAFF"/>
+                </svg>
+                <div className="text-left">
+                  <p className="text-[10px] uppercase font-medium text-muted-foreground leading-tight">Works with</p>
+                  <p className="text-foreground font-bold text-lg leading-tight">amazon alexa</p>
+                </div>
               </div>
             </div>            
             <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
