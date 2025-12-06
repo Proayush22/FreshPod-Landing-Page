@@ -1,4 +1,5 @@
 import { Cpu, Radio, Battery, Shield } from "lucide-react";
+import techRender from "@/assets/tech-render.png";
 
 const specs = [
   {
@@ -8,17 +9,17 @@ const specs = [
       { label: "Type", value: "Metal Oxide (MOX)" },
       { label: "Detection", value: "VOCs, Amines, Sulfur" },
       { label: "AI-Trained", value: "Fresh vs. Rotten" },
-      { label: "Sampling", value: "Every 30-60 min" },
+      { label: "Sampling", value: "Every 5+ hours" },
     ],
   },
   {
     category: "Connectivity",
     icon: Radio,
     items: [
-      { label: "Protocol", value: "Bluetooth Low Energy" },
-      { label: "Range", value: "10m (through walls)" },
+      { label: "Protocol", value: "BLE + Smart Home" },
+      { label: "Range", value: "Anywhere (via hub)" },
       { label: "Compatibility", value: "iOS & Android" },
-      { label: "Hub Support", value: "Optional" },
+      { label: "Hub Support", value: "HomePod, Nest, Echo" },
     ],
   },
   {
@@ -26,7 +27,7 @@ const specs = [
     icon: Battery,
     items: [
       { label: "Battery Type", value: "Li-SOCl2 (Cold-rated)" },
-      { label: "Life Span", value: "Up to 6 months" },
+      { label: "Life Span", value: "Up to 3 months" },
       { label: "Charging", value: "Wireless (Qi)" },
       { label: "Indicator", value: "Low battery alert" },
     ],
@@ -37,7 +38,7 @@ const specs = [
     items: [
       { label: "Material", value: "Food-grade PP" },
       { label: "Rating", value: "IP67 Waterproof" },
-      { label: "Dimensions", value: "Ø45mm × 60mm" },
+      { label: "Dimensions", value: "42×38×18mm" },
       { label: "Weight", value: "42g" },
     ],
   },
@@ -58,29 +59,41 @@ const SpecsSection = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {specs.map((spec) => (
-            <div
-              key={spec.category}
-              className="p-6 rounded-2xl bg-card border border-border hover:border-fresh/30 transition-all duration-300"
-            >
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-fresh/10 border border-fresh/20 flex items-center justify-center">
-                  <spec.icon className="w-5 h-5 text-fresh" />
-                </div>
-                <h3 className="text-lg font-semibold">{spec.category}</h3>
-              </div>
-              
-              <div className="space-y-3">
-                {spec.items.map((item) => (
-                  <div key={item.label} className="flex justify-between items-center">
-                    <span className="text-sm text-muted-foreground">{item.label}</span>
-                    <span className="text-sm font-medium">{item.value}</span>
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Technical Render */}
+          <div className="relative flex justify-center">
+            <img 
+              src={techRender} 
+              alt="FreshPod internal components diagram" 
+              className="w-full max-w-lg rounded-2xl"
+            />
+          </div>
+
+          {/* Specs Grid */}
+          <div className="grid sm:grid-cols-2 gap-6">
+            {specs.map((spec) => (
+              <div
+                key={spec.category}
+                className="p-6 rounded-2xl bg-card border border-border hover:border-fresh/30 transition-all duration-300"
+              >
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-xl bg-fresh/10 border border-fresh/20 flex items-center justify-center">
+                    <spec.icon className="w-5 h-5 text-fresh" />
                   </div>
-                ))}
+                  <h3 className="text-lg font-semibold">{spec.category}</h3>
+                </div>
+                
+                <div className="space-y-3">
+                  {spec.items.map((item) => (
+                    <div key={item.label} className="flex justify-between items-center">
+                      <span className="text-sm text-muted-foreground">{item.label}</span>
+                      <span className="text-sm font-medium">{item.value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
