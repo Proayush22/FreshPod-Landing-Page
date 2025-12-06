@@ -144,7 +144,7 @@ const AppSection = () => {
             </div>            
             <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
               <svg className="w-6 h-6 text-foreground" viewBox="0 0 24 24" fill="currentColor">
-                <path xmlns="http://www.w3.org/2000/svg" d="M38.5357,42.2722H9.4643A3.9642,3.9642,0,0,1,5.5,38.3079V24.2127a3.9628,3.9628,0,0,1,1.1627-2.8046l14.5357-14.52a3.9629,3.9629,0,0,1,5.6032,0l14.5357,14.52A3.9628,3.9628,0,0,1,42.5,24.2127V38.3079A3.9642,3.9642,0,0,1,38.5357,42.2722ZM13.4286,34.3437H34.5714V25.8559L24,15.2956l-10.5714,10.56Z"/>             
+                <path d="M12.48 10.92v3.28h7.84c-.24 1.84-.853 3.187-1.787 4.133-1.147 1.147-2.933 2.4-6.053 2.4-4.827 0-8.6-3.893-8.6-8.72s3.773-8.72 8.6-8.72c2.6 0 4.507 1.027 5.907 2.347l2.307-2.307C18.747 1.44 16.133 0 12.48 0 5.867 0 .533 5.333.533 12S5.867 24 12.48 24c3.44 0 6.053-1.147 8.16-3.293 2.16-2.16 2.84-5.213 2.84-7.667 0-.76-.053-1.467-.173-2.12H12.48z"/>
               </svg>
               <div className="text-left">
                 <p className="text-[10px] text-muted-foreground">Works with</p>
@@ -157,7 +157,7 @@ const AppSection = () => {
               </svg>
               <div className="text-left">
                 <p className="text-[10px] text-muted-foreground">Works with</p>
-                <p className="text-foreground font-semibold text-sm">Apple Home</p>
+                <p className="text-foreground font-semibold text-sm">Apple HomePod</p>
               </div>
             </div>    
           </div>
