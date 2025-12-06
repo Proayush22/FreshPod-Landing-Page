@@ -28,7 +28,7 @@ const Navbar = () => {
           </div>
           
           <Button variant="default" size="sm">
-            Pre-Order
+            Join Waitlist
           </Button>
         </div>
       </div>
