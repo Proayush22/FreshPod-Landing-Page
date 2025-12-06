@@ -24,7 +24,9 @@ const Index = () => {
       <section id="app">
         <AppSection />
       </section>
-      <CTASection />
+      <section id="cta">      
+        <CTASection/>
+      </section>
       <Footer />
     </main>
   );

@@ -26,10 +26,12 @@ const Navbar = () => {
               Our App
             </a>
           </div>
-          
-          <Button variant="default" size="sm">
-            Join Waitlist
-          </Button>
+                      
+          <a href="#cta" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+            <Button variant="default" size="sm">
+              Join Waitlist
+            </Button>
+          </a>
         </div>
       </div>
     </nav>
