@@ -134,7 +134,7 @@ const AppSection = () => {
           <div className="flex justify-center gap-4">
             <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
               <svg className="w-6 h-6 text-foreground" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M11.97 8.3c-2.45 0-5.18.9-7.1 2.45l-1.05-1.5c2.25-1.8 5.4-2.8 8.15-2.8 2.6 0 5.4 1 7.2 2.7l-1.15 1.55c-1.55-1.4-3.9-2.25-6.05-2.25zm-8.3 5.45c1.65-1.35 4.35-2.25 7-2.25 2.1 0 4.25.6 5.8 1.7l-1.15 1.55c-1.2-.85-2.85-1.3-4.65-1.3-2.05 0-4.15.7-5.4 1.75l-1.6-1.45zm3.7 3.05c1.35-.95 2.95-1.45 4.6-1.45 1.25 0 2.5.3 3.6.9l-1.1 1.55c-.75-.4-1.6-.6-2.5-.6-1.15 0-2.25.35-3.2 1l-1.4-1.4z"/>
+                <path xmlns="http://www.w3.org/2000/svg" d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2M10.43,21.87v-2A1.76,1.76,0,0,0,9.35,18.3,6.83,6.83,0,1,1,18.83,12C18.83,16.43,15.39,20.61,10.43,21.87Z"/>
               </svg>
               <div className="text-left">
                 <p className="text-[10px] text-muted-foreground">Works with</p>
