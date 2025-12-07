@@ -174,8 +174,8 @@ const Team = () => {
               <div className="relative bg-card border border-border rounded-3xl p-8">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <p className="text-4xl font-bold text-fresh">119bn lb</p>
-                    <p className="text-sm text-muted-foreground">of Food Spoiled Per Year</p>
+                    <p className="text-4xl font-bold text-fresh">119 billion</p>
+                    <p className="text-sm text-muted-foreground">lbs of Food Spoiled Per Year</p>
                   </div>
                   <div>
                     <p className="text-4xl font-bold text-fresh">$1,500</p>
