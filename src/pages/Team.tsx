@@ -340,7 +340,7 @@ const Team = () => {
       </section>
 
       {/* Product Evolution */}
-      <section className="py-24 px-6">
+      <section className="py-24 px-6" id="evolution">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="text-center mb-16"

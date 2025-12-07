@@ -54,7 +54,7 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <Link to="/team" className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}>
+                <Link to="/team#about" className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}>
                   About Us
                 </Link>
                 <a href="/team#us" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -78,7 +78,7 @@ const Navbar = () => {
             */}
           </div>
                       
-          <a href="#cta" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+          <a href="/#cta" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             <Button variant="default" size="sm">
               Join Waitlist
             </Button>
