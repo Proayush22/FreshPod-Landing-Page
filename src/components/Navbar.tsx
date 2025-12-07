@@ -85,7 +85,7 @@ const Navbar = () => {
             */}
           </div>
                       
-          <Link to={isHomePage ? "#cta" : "/#cta"}>
+          <Link to={isHomePage ? "/#cta" : "/#cta"}>
             <Button variant="default" size="sm">
               Join Waitlist
             </Button>
