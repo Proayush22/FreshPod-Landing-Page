@@ -67,7 +67,7 @@ const SpecsSection = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Technical Render */}
+          {/* Technical Render with Parallax */}
           <motion.div 
             className="relative flex justify-center"
             initial={{ opacity: 0, x: -50 }}
@@ -75,10 +75,15 @@ const SpecsSection = () => {
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            <img 
+            <motion.img 
               src={techRender} 
               alt="FreshPod internal components diagram" 
               className="w-full max-w-lg rounded-2xl"
+              initial={{ y: 0 }}
+              whileInView={{ y: -20 }}
+              viewport={{ once: false }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              style={{ willChange: "transform" }}
             />
           </motion.div>
 

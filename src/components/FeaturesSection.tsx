@@ -1,4 +1,5 @@
 import { Wind, Smartphone, Zap, Droplets } from "lucide-react";
+import { motion } from "framer-motion";
 
 const features = [
   {
@@ -48,23 +49,32 @@ const FeaturesSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-card to-background" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Precision <span className="text-gradient-fresh">Technology</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Powered by advanced sensors and AI-trained algorithms to keep your food safe
           </p>
-        </div>
+        </motion.div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => {
             const colors = colorClasses[feature.color];
             return (
-              <div
+              <motion.div
                 key={feature.title}
                 className={`group p-6 rounded-2xl bg-card border border-border hover:border-fresh/30 transition-all duration-500 ${colors.glow}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className={`w-12 h-12 rounded-xl ${colors.bg} ${colors.border} border flex items-center justify-center mb-4 transition-transform duration-300 group-hover:scale-110`}>
                   <feature.icon className={`w-6 h-6 ${colors.icon}`} />
@@ -73,7 +83,7 @@ const FeaturesSection = () => {
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
-              </div>
+              </motion.div>
             );
           })}
         </div>
