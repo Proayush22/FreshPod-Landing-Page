@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Twitter, Rocket, Award, Users, Lightbulb, Target, TrendingUp } from "lucide-react";
 import evolutionV1 from "@/assets/evolution-v1.png";
 import evolutionV2 from "@/assets/evolution-v2.png";
 import evolutionV3 from "@/assets/evolution-v3.png";
@@ -51,6 +51,58 @@ const evolutionSteps = [
     title: "Production Ready",
     description: "Final sleek design with wireless charging, IP67 rating, and smart home hub integration.",
     image: evolutionV3,
+  },
+];
+
+const milestones = [
+  {
+    date: "Jan 2023",
+    title: "The Idea is Born",
+    description: "Founders Alex and Sarah meet at FoodTech Summit and discover their shared vision for smart food safety.",
+    icon: Lightbulb,
+    side: "left" as const,
+  },
+  {
+    date: "Apr 2023",
+    title: "First Prototype",
+    description: "Built the first working prototype using off-the-shelf MOX sensors and Arduino boards.",
+    icon: Rocket,
+    side: "right" as const,
+  },
+  {
+    date: "Aug 2023",
+    title: "Y Combinator Acceptance",
+    description: "Accepted into YC W23 batch, validating our mission to reduce food waste through technology.",
+    icon: Award,
+    side: "left" as const,
+  },
+  {
+    date: "Dec 2023",
+    title: "Seed Funding Raised",
+    description: "$2.5M seed round led by Founders Fund with participation from climate-focused VCs.",
+    icon: TrendingUp,
+    side: "right" as const,
+  },
+  {
+    date: "Mar 2024",
+    title: "Team Expansion",
+    description: "Grew from 4 to 12 team members, bringing on hardware experts from Apple and Nest.",
+    icon: Users,
+    side: "left" as const,
+  },
+  {
+    date: "Sep 2024",
+    title: "AI Accuracy Milestone",
+    description: "Achieved 95% detection accuracy through proprietary AI training on 10,000+ samples.",
+    icon: Target,
+    side: "right" as const,
+  },
+  {
+    date: "Q4 2026",
+    title: "Consumer Launch",
+    description: "FreshPod ships to customers worldwide. Pre-orders now open with exclusive early-bird pricing.",
+    icon: Rocket,
+    side: "left" as const,
   },
 ];
 
@@ -135,6 +187,90 @@ const Team = () => {
               </div>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Company Milestones Timeline */}
+      <section className="py-24 px-6 bg-gradient-to-b from-card/50 to-background overflow-hidden">
+        <div className="container mx-auto max-w-5xl">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our <span className="text-gradient-fresh">Journey</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Key milestones on our path to revolutionizing food safety
+            </p>
+          </motion.div>
+
+          <div className="relative">
+            {/* Vertical timeline line */}
+            <motion.div 
+              className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-fresh/50 via-fresh/30 to-transparent hidden md:block"
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              style={{ originY: 0 }}
+            />
+
+            <div className="space-y-12 md:space-y-0">
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={milestone.title}
+                  className={`relative md:flex items-center ${
+                    milestone.side === "left" ? "md:flex-row" : "md:flex-row-reverse"
+                  } md:mb-12`}
+                  initial={{ opacity: 0, x: milestone.side === "left" ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  {/* Content */}
+                  <div className={`md:w-[calc(50%-2rem)] ${
+                    milestone.side === "left" ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
+                  }`}>
+                    <div className={`bg-card border border-border rounded-2xl p-6 hover:border-fresh/30 transition-colors ${
+                      milestone.side === "left" ? "md:ml-auto" : "md:mr-auto"
+                    } max-w-md`}>
+                      <div className={`flex items-center gap-3 mb-3 ${
+                        milestone.side === "left" ? "md:justify-end" : "md:justify-start"
+                      }`}>
+                        <span className="px-3 py-1 bg-fresh/10 border border-fresh/20 rounded-full text-fresh text-xs font-medium">
+                          {milestone.date}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2">{milestone.title}</h3>
+                      <p className="text-muted-foreground text-sm">{milestone.description}</p>
+                    </div>
+                  </div>
+
+                  {/* Center icon */}
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-card border-2 border-fresh items-center justify-center z-10">
+                    <milestone.icon className="w-5 h-5 text-fresh" />
+                  </div>
+
+                  {/* Mobile icon */}
+                  <div className="md:hidden flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-fresh/10 border border-fresh/30 flex items-center justify-center">
+                      <milestone.icon className="w-4 h-4 text-fresh" />
+                    </div>
+                    <span className="px-3 py-1 bg-fresh/10 border border-fresh/20 rounded-full text-fresh text-xs font-medium">
+                      {milestone.date}
+                    </span>
+                  </div>
+
+                  {/* Spacer for the other side */}
+                  <div className="hidden md:block md:w-[calc(50%-2rem)]" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
