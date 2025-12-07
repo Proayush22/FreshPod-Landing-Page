@@ -1,4 +1,5 @@
 import { Smartphone, Bell, ShoppingCart, Package, BarChart3 } from "lucide-react";
+import { motion } from "framer-motion";
 import appHome from "@/assets/app-home.png";
 import appPantry from "@/assets/app-pantry.png";
 import appDetail from "@/assets/app-detail.png";
@@ -61,7 +62,13 @@ const AppSection = () => {
     <section className="py-24 md:py-32 bg-gradient-to-b from-background to-card/50 overflow-hidden">
       <div className="container mx-auto px-4 md:px-6">
         {/* Header */}
-        <div className="text-center mb-16">
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
           <div className="inline-flex items-center gap-2 bg-fresh/10 border border-fresh/20 rounded-full px-4 py-2 mb-6">
             <Smartphone className="w-4 h-4 text-fresh" />
             <span className="text-fresh text-sm font-medium">Companion App</span>
@@ -73,21 +80,25 @@ const AppSection = () => {
             The FreshPod app seamlessly syncs with your device, giving you complete 
             control over your food inventory from anywhere.
           </p>
-        </div>
+        </motion.div>
 
         {/* App Features Grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
           {features.map((feature, index) => (
-            <div 
+            <motion.div 
               key={index}
               className="bg-card/50 border border-border/50 rounded-2xl p-4 text-center hover:border-fresh/30 transition-colors"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
             >
               <div className="w-10 h-10 bg-fresh/10 rounded-xl flex items-center justify-center mx-auto mb-3">
                 <feature.icon className="w-5 h-5 text-fresh" />
               </div>
               <h3 className="text-foreground font-semibold text-sm mb-1">{feature.title}</h3>
               <p className="text-muted-foreground text-xs">{feature.description}</p>
-            </div>
+            </motion.div>
           ))}
         </div>
 
@@ -99,9 +110,13 @@ const AppSection = () => {
           
           <div className="flex gap-6 overflow-x-auto pb-8 px-4 scrollbar-hide snap-x snap-mandatory">
             {appScreens.map((screen, index) => (
-              <div 
+              <motion.div 
                 key={index}
                 className="flex-shrink-0 snap-center group"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 {/* Phone Frame */}
                 <div className="relative bg-card border-4 border-border/80 rounded-[2.5rem] p-2 shadow-2xl shadow-black/50 hover:border-fresh/30 transition-all duration-300 hover:shadow-fresh/10">
@@ -123,13 +138,19 @@ const AppSection = () => {
                   <h3 className="text-foreground font-semibold mb-1">{screen.title}</h3>
                   <p className="text-muted-foreground text-sm">{screen.description}</p>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* Download CTA */}
-        <div className="text-center mt-12">
+        <motion.div 
+          className="text-center mt-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
           <p className="text-muted-foreground mb-4">Coming soon to iOS and Android</p>
           <div className="flex justify-center gap-4">
             <div className="bg-card border border-border/50 rounded-xl px-6 py-3 flex items-center gap-3 opacity-60">
@@ -161,7 +182,7 @@ const AppSection = () => {
               </div>
             </div>    
           </div>
-        </div>
+        </motion.div>
 
       </div>
     </section>
