@@ -128,7 +128,9 @@ const Team = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Meet the <span className="text-gradient-fresh">Team</span>
+              {/*Meet the <span className="text-gradient-fresh">Team</span>*/}
+              About <span className="text-gradient-fresh">FreshPod</span>
+
             </h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               We're a passionate team of engineers, designers, and food scientists 
@@ -149,9 +151,11 @@ const Team = () => {
             transition={{ duration: 0.6 }}
           >
             <div>
+              {/* 
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
                 About <span className="text-gradient-fresh">FreshPod</span>
               </h2>
+              */}
               <div className="space-y-4 text-muted-foreground">
                 <p>
                   FreshPod was born from a simple frustration: throwing away meat that looked fine 
