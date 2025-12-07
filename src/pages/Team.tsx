@@ -293,14 +293,14 @@ const Team = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our <span className="text-gradient-fresh">Our Founders</span>
+              Our <span className="text-gradient-fresh">Founders</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Rutgers University students united by a shared passion for innovation
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {teamMembers.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -335,7 +335,7 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Product Evolution 
+      {/* Product Evolution */}
       <section className="py-24 px-6">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
@@ -363,13 +363,13 @@ const Team = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
-                {/* Connection line 
+                {/* Connection line */}
                 {index < evolutionSteps.length - 1 && (
                   <div className="hidden md:block absolute top-32 left-[calc(50%+4rem)] right-0 h-px bg-gradient-to-r from-fresh/50 to-transparent" />
                 )}
                 
                 <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-fresh/30 transition-colors">
-                  {/* Evolution image 
+                  {/* Evolution image */}
                   <div className="aspect-[4/3] bg-gradient-to-br from-fresh/5 to-card overflow-hidden">
                     <img 
                       src={step.image} 
@@ -393,7 +393,7 @@ const Team = () => {
           </div>
         </div>
       </section>
-      */}
+      
 
       <Footer />
     </div>
