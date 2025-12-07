@@ -186,8 +186,8 @@ const Team = () => {
                     <p className="text-sm text-muted-foreground">People Experience Food Poisoning</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-bold text-fresh">32% Americans</p>
-                    <p className="text-sm text-muted-foreground">Frequently Forget Leftovers</p>
+                    <p className="text-4xl font-bold text-fresh">32%</p>
+                    <p className="text-sm text-muted-foreground">Americans Frequently Forget Leftovers</p>
                   </div>
                 </div>
               </div>
