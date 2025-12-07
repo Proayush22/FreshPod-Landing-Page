@@ -47,26 +47,42 @@ const Navbar = () => {
                 <a href="#app" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Our App
                 </a>
+                            <Link 
+              to="/team" 
+              className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}
+            >
+              About Us
+            </Link>
+
               </>
             ) : (
               <>
-                <Link to="#team" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                          <Link 
+              to="/team" 
+              className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}
+            >
+              About Us
+            </Link>
+
+                <Link to="/team#us" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Our Team
                 </Link>
-                <Link to="/#evolution" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/team#evolution" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Evolution
                 </Link>
-                <Link to="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/team#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Contact Us
                 </Link>
               </>
             )}
+            {/*
             <Link 
               to="/team" 
               className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}
             >
-              About
+              About Us
             </Link>
+            */}
           </div>
                       
           <Link to={isHomePage ? "#cta" : "/#cta"}>

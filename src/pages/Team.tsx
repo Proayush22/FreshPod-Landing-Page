@@ -287,7 +287,7 @@ const Team = () => {
       */}
 
       {/* Team Grid */}
-      <section className="py-16 px-6 bg-gradient-to-b from-background to-card/50" id="team">
+      <section className="py-16 px-6 bg-gradient-to-b from-background to-card/50" id="us">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="text-center mb-12"
