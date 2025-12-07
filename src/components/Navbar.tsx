@@ -47,32 +47,25 @@ const Navbar = () => {
                 <a href="#app" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Our App
                 </a>
-                            <Link 
-              to="/team" 
-              className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}
-            >
-              About Us
-            </Link>
+                <Link to="/team" className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}>
+                  About Us
+                </Link>
 
               </>
             ) : (
               <>
-                          <Link 
-              to="/team" 
-              className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}
-            >
-              About Us
-            </Link>
-
-                <Link to="/team#us" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                <Link to="/team" className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}>
+                  About Us
+                </Link>
+                <a href="/team#us" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Our Team
-                </Link>
-                <Link to="/team#evolution" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                </a>
+                <a href="/team#evolution" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Evolution
-                </Link>
-                <Link to="/team#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                </a>
+                <a href="/team#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Contact Us
-                </Link>
+                </a>
               </>
             )}
             {/*
@@ -85,11 +78,11 @@ const Navbar = () => {
             */}
           </div>
                       
-          <Link to={isHomePage ? "/#cta" : "/#cta"}>
+          <a href="#cta" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
             <Button variant="default" size="sm">
               Join Waitlist
             </Button>
-          </Link>
+          </a>
         </div>
       </div>
     </nav>
