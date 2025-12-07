@@ -174,20 +174,20 @@ const Team = () => {
               <div className="relative bg-card border border-border rounded-3xl p-8">
                 <div className="grid grid-cols-2 gap-6 text-center">
                   <div>
-                    <p className="text-4xl font-bold text-fresh">12</p>
-                    <p className="text-sm text-muted-foreground">Team Members</p>
+                    <p className="text-4xl font-bold text-fresh">119bn lb</p>
+                    <p className="text-sm text-muted-foreground">of Food Spoiled Per Year</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-bold text-fresh">$2.5M</p>
-                    <p className="text-sm text-muted-foreground">Seed Funding</p>
+                    <p className="text-4xl font-bold text-fresh">$1,500</p>
+                    <p className="text-sm text-muted-foreground">Worth Wasted Food Per HousHold</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-bold text-fresh">5</p>
-                    <p className="text-sm text-muted-foreground">Patents Filed</p>
+                    <p className="text-4xl font-bold text-fresh">1 in 6</p>
+                    <p className="text-sm text-muted-foreground">People Experience Food Poisoning</p>
                   </div>
                   <div>
-                    <p className="text-4xl font-bold text-fresh">2026</p>
-                    <p className="text-sm text-muted-foreground">Launch Year</p>
+                    <p className="text-4xl font-bold text-fresh">32% Americans</p>
+                    <p className="text-sm text-muted-foreground">Frequently Forget Leftovers</p>
                   </div>
                 </div>
               </div>
