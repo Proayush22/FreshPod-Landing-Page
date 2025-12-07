@@ -9,12 +9,28 @@ const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container mx-auto max-w-7xl px-6">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <div className="w-8 h-8 rounded-lg bg-fresh flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">FP</span>
-            </div>
-            <span className="font-semibold text-lg">FreshPod</span>
-          </Link>
+
+          {isHomePage ? (
+            <>
+              <Link to="#top" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+                <div className="w-8 h-8 rounded-lg bg-fresh flex items-center justify-center">
+                  <span className="text-primary-foreground font-bold text-sm">FP</span>
+                </div>
+                <span className="font-semibold text-lg">FreshPod</span>
+              </Link>
+
+            </>
+          ): (
+            <>
+              <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+              <div className="w-8 h-8 rounded-lg bg-fresh flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">FP</span>
+              </div>
+              <span className="font-semibold text-lg">FreshPod</span>
+            </Link>
+
+            </>
+          )}
           
           <div className="hidden md:flex items-center gap-8">
             {isHomePage ? (
@@ -34,14 +50,14 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Home
+                <Link to="#team" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Our Team
                 </Link>
-                <Link to="/#features" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Features
+                <Link to="/#evolution" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Evolution
                 </Link>
-                <Link to="/#specs" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Specs
+                <Link to="/#contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Contact Us
                 </Link>
               </>
             )}
@@ -49,7 +65,7 @@ const Navbar = () => {
               to="/team" 
               className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}
             >
-              Our Team
+              About
             </Link>
           </div>
                       

@@ -2,32 +2,38 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
 import { Linkedin, Twitter, Rocket, Award, Users, Lightbulb, Target, TrendingUp } from "lucide-react";
-import evolutionV1 from "@/assets/evolution-v1.png";
-import evolutionV2 from "@/assets/evolution-v2.png";
-import evolutionV3 from "@/assets/evolution-v3.png";
+import evolutionV1 from "@/assets/evolution-v0.png";
+import evolutionV2 from "@/assets/evolution-v1.png";
+import evolutionV3 from "@/assets/evolution-v2.png";
 
 const teamMembers = [
   {
-    name: "Alex Chen",
-    role: "CEO & Co-Founder",
+    name: "Ayush Sinha",
+    role: "CEO",
     bio: "Former food scientist at Stanford. Passionate about reducing food waste through technology.",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
   },
   {
-    name: "Sarah Miller",
-    role: "CTO & Co-Founder",
+    name: "Carol Johnson-Fish",
+    role: "CMO",
     bio: "Ex-Google engineer specializing in IoT and sensor technology. Built smart home devices used by millions.",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=face",
   },
   {
-    name: "David Park",
-    role: "Head of Hardware",
+    name: "Emre Ekin",
+    role: "COO",
     bio: "15 years in consumer electronics. Previously led hardware teams at Nest and Apple.",
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
   },
   {
-    name: "Emma Rodriguez",
-    role: "Head of Product",
+    name: "Malak Shatlh",
+    role: "CFO",
+    bio: "Product design veteran focused on creating intuitive user experiences for smart home devices.",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+  },
+  {
+    name: "Noam Gold",
+    role: "CTO",
     bio: "Product design veteran focused on creating intuitive user experiences for smart home devices.",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
   },
@@ -35,20 +41,20 @@ const teamMembers = [
 
 const evolutionSteps = [
   {
-    year: "2023",
-    title: "Concept & Research",
+    year: "1",
+    title: "Strechable Lid",
     description: "Initial prototype using basic gas sensors. Bulky design focused on proving the core detection technology.",
     image: evolutionV1,
   },
   {
-    year: "2024",
-    title: "Miniaturization",
-    description: "Reduced size by 70%. Integrated BLE connectivity and improved sensor accuracy with AI training.",
+    year: "2",
+    title: "Modernization",
+    description: "Reduced size significantly. Integrated BLE connectivity and improved sensor accuracy with AI training.",
     image: evolutionV2,
   },
   {
-    year: "2025",
-    title: "Production Ready",
+    year: "3",
+    title: "Miniaturization",
     description: "Final sleek design with wireless charging, IP67 rating, and smart home hub integration.",
     image: evolutionV3,
   },
@@ -133,7 +139,7 @@ const Team = () => {
       </section>
 
       {/* About Us Section */}
-      <section className="py-16 px-6">
+      <section className="py-16 px-6" id="about">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="grid lg:grid-cols-2 gap-12 items-center"
@@ -152,12 +158,12 @@ const Team = () => {
                   but had gone bad, and worrying about meat that was probably still safe to eat.
                 </p>
                 <p>
-                  In 2023, our founders Alex and Sarah met at a food technology conference and 
-                  discovered they shared the same vision—using sensor technology to solve the 
+                  In 2023, our founders met at Rutgers IDEA and 
+                  discovered they shared the same vision: using sensor technology to solve the 
                   age-old problem of food spoilage detection.
                 </p>
                 <p>
-                  Today, we're a team of 12 based in San Francisco, working to bring smart food 
+                  Today, we're a team of 5 based at Rutgers, working to bring smart food 
                   safety to every kitchen. Our mission is to reduce the 40% of food that gets 
                   wasted in American households while keeping families safe from foodborne illness.
                 </p>
@@ -190,7 +196,8 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Company Milestones Timeline */}
+    {/*
+      {/* Company Milestones Timeline 
       <section className="py-24 px-6 bg-gradient-to-b from-card/50 to-background overflow-hidden">
         <div className="container mx-auto max-w-5xl">
           <motion.div 
@@ -209,7 +216,7 @@ const Team = () => {
           </motion.div>
 
           <div className="relative">
-            {/* Vertical timeline line */}
+            {/* Vertical timeline line 
             <motion.div 
               className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-fresh/50 via-fresh/30 to-transparent hidden md:block"
               initial={{ scaleY: 0 }}
@@ -231,7 +238,7 @@ const Team = () => {
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  {/* Content */}
+                  {/* Content 
                   <div className={`md:w-[calc(50%-2rem)] ${
                     milestone.side === "left" ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
                   }`}>
@@ -250,12 +257,12 @@ const Team = () => {
                     </div>
                   </div>
 
-                  {/* Center icon */}
+                  {/* Center icon 
                   <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-card border-2 border-fresh items-center justify-center z-10">
                     <milestone.icon className="w-5 h-5 text-fresh" />
                   </div>
 
-                  {/* Mobile icon */}
+                  {/* Mobile icon 
                   <div className="md:hidden flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-full bg-fresh/10 border border-fresh/30 flex items-center justify-center">
                       <milestone.icon className="w-4 h-4 text-fresh" />
@@ -265,7 +272,7 @@ const Team = () => {
                     </span>
                   </div>
 
-                  {/* Spacer for the other side */}
+                  {/* Spacer for the other side 
                   <div className="hidden md:block md:w-[calc(50%-2rem)]" />
                 </motion.div>
               ))}
@@ -273,9 +280,10 @@ const Team = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Team Grid */}
-      <section className="py-16 px-6 bg-gradient-to-b from-background to-card/50">
+      <section className="py-16 px-6 bg-gradient-to-b from-background to-card/50" id="team">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
             className="text-center mb-12"
@@ -285,10 +293,10 @@ const Team = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Our <span className="text-gradient-fresh">Leadership</span>
+              Our <span className="text-gradient-fresh">Our Founders</span>
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Industry veterans united by a shared passion for innovation
+              Rutgers University students united by a shared passion for innovation
             </p>
           </motion.div>
 
@@ -327,7 +335,7 @@ const Team = () => {
         </div>
       </section>
 
-      {/* Product Evolution */}
+      {/* Product Evolution 
       <section className="py-24 px-6">
         <div className="container mx-auto max-w-7xl">
           <motion.div 
@@ -355,13 +363,13 @@ const Team = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
               >
-                {/* Connection line */}
+                {/* Connection line 
                 {index < evolutionSteps.length - 1 && (
                   <div className="hidden md:block absolute top-32 left-[calc(50%+4rem)] right-0 h-px bg-gradient-to-r from-fresh/50 to-transparent" />
                 )}
                 
                 <div className="bg-card border border-border rounded-2xl overflow-hidden hover:border-fresh/30 transition-colors">
-                  {/* Evolution image */}
+                  {/* Evolution image 
                   <div className="aspect-[4/3] bg-gradient-to-br from-fresh/5 to-card overflow-hidden">
                     <img 
                       src={step.image} 
@@ -385,6 +393,7 @@ const Team = () => {
           </div>
         </div>
       </section>
+      */}
 
       <Footer />
     </div>
