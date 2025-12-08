@@ -187,7 +187,7 @@ const ContactSection = () => {
             Contact <span className="text-gradient-fresh">Us</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have questions? We'd love to hear from you.
+            Have an Inquiry? We'd love to hear from you.
           </p>
         </motion.div>
 
@@ -250,7 +250,7 @@ const ContactSection = () => {
               </Button>
             </form>
           </motion.div>
-
+{/*
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: 40 }}
@@ -301,6 +301,7 @@ const ContactSection = () => {
               </div>
             </div>
           </motion.div>
+          */}
         </div>
       </div>
     </section>
