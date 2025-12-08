@@ -22,28 +22,28 @@ const teamMembers = [
     name: "Ayush Sinha",
     role: "CEO",
     bio: "Computer Science Student at Rutgers Univeristy.",
-    image: "@/assets/Ayush Sinha HeadShot.png",
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQGf2XiZvybarQ/profile-displayphoto-crop_800_800/B4EZmNIkLSIoAI-/0/1759009457599?e=1766620800&v=beta&t=InR8grCKAPKybAkLIDk4ZWAzuaE-gHGBpccFz1drFE4",
     linkedin: "https://www.linkedin.com/in/ayush-si-nha"
   },
   {
     name: "Carol Johnson-Fish",
     role: "CMO",
     bio: "HR & Psychology Student at Rutgers University.",
-    image: "caroldHeadShot",
+    image: "https://media.licdn.com/dms/image/v2/D4D03AQEGUZkgyeYVKg/profile-displayphoto-crop_800_800/B4DZm24EY_JMAI-/0/1759709776187?e=1766620800&v=beta&t=YT2wJebSnxLLHYnrUu5hF_nfjXajoePgCsepFEcDRts",
     linkedin: "https://www.linkedin.com/in/carol-johnson-fish"
   },
   {
     name: "Emre Ekin",
     role: "CTO",
     bio: "Honors Biochemistry Student at Rutgers University.",
-    image: "emreHeadShot",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQEvbjxUZxHVxQ/profile-displayphoto-crop_800_800/B56Zii9vzWG4AM-/0/1755080753851?e=1766620800&v=beta&t=BdFYP0Y4DtmDUZOzQsd7A9iy4D4WtG-oBFoeS7QiQdA",
     linkedin: "https://www.linkedin.com/in/emre-ekin-435a96321/"
   },
   {
     name: "Noam Gold",
     role: "CFO",
     bio: "Honors Materials Engineering Student at Rutgers University.",
-    image: "noamHeadShot",
+    image: "https://media.licdn.com/dms/image/v2/D4E03AQG89NIJL_b_Zw/profile-displayphoto-crop_800_800/B4EZgQMYB8GoAI-/0/1752618389667?e=1766620800&v=beta&t=w3sUKDf3qqr7IRdAkXiVVWlQXtwdDbIbGyzg3atxVIg",
     linkedin: "https://www.linkedin.com/in/noam-gold-293470361/"
   },
   {
