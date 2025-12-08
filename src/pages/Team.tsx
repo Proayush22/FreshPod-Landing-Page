@@ -187,14 +187,14 @@ const ContactSection = () => {
             Contact <span className="text-gradient-fresh">Us</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            Have an Inquiry? We'd love to hear from you.
+            Have questions? We'd love to hear from you.
           </p>
         </motion.div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.6 }}
           >
@@ -250,72 +250,236 @@ const ContactSection = () => {
               </Button>
             </form>
           </motion.div>
+
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="bg-card border border-border rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-fresh/10 border border-fresh/30 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-fresh" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Email</h3>
+                  <p className="text-muted-foreground text-sm">ayush.sinha.25@outlook.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-fresh/10 border border-fresh/30 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-fresh" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Location</h3>
+                  <p className="text-muted-foreground text-sm">Rutgers University<br />New Brunswick, NJ</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-fresh/10 border border-fresh/30 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-fresh" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Follow Us</h3>
+                  <div className="flex gap-3 mt-2">
+                    <a href="#" className="text-muted-foreground hover:text-fresh transition-colors">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="text-muted-foreground hover:text-fresh transition-colors">
+                      <Twitter className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>
   );
 };
 
-const AboutSection = () => (
-  <section className="py-16 px-6" id="about">
-    <div className="container mx-auto max-w-7xl">
-      <motion.div 
-        className="grid lg:grid-cols-2 gap-12 items-center"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.6 }}
-      >
-        <div>
-          <div className="space-y-4 text-muted-foreground">
-            <p>
-              FreshPod was born from a simple frustration: throwing away meat that looked fine 
-              but had gone bad, and worrying about meat that was probably still safe to eat.
-            </p>
-            <p>
-              In 2023, our founders met at Rutgers IDEA and 
-              discovered they shared the same vision: using sensor technology to solve the 
-              age-old problem of food spoilage detection.
-            </p>
-            <p>
-              Today, we're a team of 5 based at Rutgers, working to bring smart food 
-              safety to every kitchen. Our mission is to reduce the 40% of food that gets 
-              wasted in American households while keeping families safe from foodborne illness.
-            </p>
-          </div>
-        </div>
-        <div className="relative">
-          <div className="absolute inset-0 bg-fresh/10 rounded-3xl blur-3xl" />
-          <div className="relative bg-card border border-border rounded-3xl p-8">
-            <div className="grid grid-cols-2 gap-6 text-center">
-              <div>
-                <p className="text-4xl font-bold text-fresh">119 billion</p>
-                <p className="text-sm text-muted-foreground">lbs of Food Spoiled Per Year</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold text-fresh">$1,500</p>
-                <p className="text-sm text-muted-foreground">Worth Wasted Food Per HousHold</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold text-fresh">1 in 6</p>
-                <p className="text-sm text-muted-foreground">People Experience Food Poisoning</p>
-              </div>
-              <div>
-                <p className="text-4xl font-bold text-fresh">32%</p>
-                <p className="text-sm text-muted-foreground">Americans Frequently Forget Leftovers</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </motion.div>
-    </div>
-  </section>
-);
-
 const Team = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      
+      {/* Hero Banner */}
+      <section className="pt-32 pb-16 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-fresh/5 to-background" />
+        <div className="container mx-auto max-w-7xl relative z-10">
+          <motion.div 
+            className="text-center"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              {/*Meet the <span className="text-gradient-fresh">Team</span>*/}
+              About <span className="text-gradient-fresh">FreshPod</span>
+
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              We're a passionate team of engineers, designers, and food scientists 
+              on a mission to eliminate food waste through smart technology.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* About Us Section */}
+      <section className="py-16 px-6" id="about">
+        <div className="container mx-auto max-w-7xl">
+          <motion.div 
+            className="grid lg:grid-cols-2 gap-12 items-center"
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div>
+              {/* 
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                About <span className="text-gradient-fresh">FreshPod</span>
+              </h2>
+              */}
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  FreshPod was born from a simple frustration: throwing away meat that looked fine 
+                  but had gone bad, and worrying about meat that was probably still safe to eat.
+                </p>
+                <p>
+                  In 2023, our founders met at Rutgers IDEA and 
+                  discovered they shared the same vision: using sensor technology to solve the 
+                  age-old problem of food spoilage detection.
+                </p>
+                <p>
+                  Today, we're a team of 5 based at Rutgers, working to bring smart food 
+                  safety to every kitchen. Our mission is to reduce the 40% of food that gets 
+                  wasted in American households while keeping families safe from foodborne illness.
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="absolute inset-0 bg-fresh/10 rounded-3xl blur-3xl" />
+              <div className="relative bg-card border border-border rounded-3xl p-8">
+                <div className="grid grid-cols-2 gap-6 text-center">
+                  <div>
+                    <p className="text-4xl font-bold text-fresh">119 billion</p>
+                    <p className="text-sm text-muted-foreground">lbs of Food Spoiled Per Year</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold text-fresh">$1,500</p>
+                    <p className="text-sm text-muted-foreground">Worth Wasted Food Per HousHold</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold text-fresh">1 in 6</p>
+                    <p className="text-sm text-muted-foreground">People Experience Food Poisoning</p>
+                  </div>
+                  <div>
+                    <p className="text-4xl font-bold text-fresh">32%</p>
+                    <p className="text-sm text-muted-foreground">Americans Frequently Forget Leftovers</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+    {/*
+      {/* Company Milestones Timeline 
+      <section className="py-24 px-6 bg-gradient-to-b from-card/50 to-background overflow-hidden">
+        <div className="container mx-auto max-w-5xl">
+          <motion.div 
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              Our <span className="text-gradient-fresh">Journey</span>
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Key milestones on our path to revolutionizing food safety
+            </p>
+          </motion.div>
+
+          <div className="relative">
+            {/* Vertical timeline line 
+            <motion.div 
+              className="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-fresh/50 via-fresh/30 to-transparent hidden md:block"
+              initial={{ scaleY: 0 }}
+              whileInView={{ scaleY: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              style={{ originY: 0 }}
+            />
+
+            <div className="space-y-12 md:space-y-0">
+              {milestones.map((milestone, index) => (
+                <motion.div
+                  key={milestone.title}
+                  className={`relative md:flex items-center ${
+                    milestone.side === "left" ? "md:flex-row" : "md:flex-row-reverse"
+                  } md:mb-12`}
+                  initial={{ opacity: 0, x: milestone.side === "left" ? -50 : 50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  {/* Content 
+                  <div className={`md:w-[calc(50%-2rem)] ${
+                    milestone.side === "left" ? "md:pr-8 md:text-right" : "md:pl-8 md:text-left"
+                  }`}>
+                    <div className={`bg-card border border-border rounded-2xl p-6 hover:border-fresh/30 transition-colors ${
+                      milestone.side === "left" ? "md:ml-auto" : "md:mr-auto"
+                    } max-w-md`}>
+                      <div className={`flex items-center gap-3 mb-3 ${
+                        milestone.side === "left" ? "md:justify-end" : "md:justify-start"
+                      }`}>
+                        <span className="px-3 py-1 bg-fresh/10 border border-fresh/20 rounded-full text-fresh text-xs font-medium">
+                          {milestone.date}
+                        </span>
+                      </div>
+                      <h3 className="text-lg font-semibold mb-2">{milestone.title}</h3>
+                      <p className="text-muted-foreground text-sm">{milestone.description}</p>
+                    </div>
+                  </div>
+
+                  {/* Center icon 
+                  <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-card border-2 border-fresh items-center justify-center z-10">
+                    <milestone.icon className="w-5 h-5 text-fresh" />
+                  </div>
+
+                  {/* Mobile icon 
+                  <div className="md:hidden flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 rounded-full bg-fresh/10 border border-fresh/30 flex items-center justify-center">
+                      <milestone.icon className="w-4 h-4 text-fresh" />
+                    </div>
+                    <span className="px-3 py-1 bg-fresh/10 border border-fresh/20 rounded-full text-fresh text-xs font-medium">
+                      {milestone.date}
+                    </span>
+                  </div>
+
+                  {/* Spacer for the other side 
+                  <div className="hidden md:block md:w-[calc(50%-2rem)]" />
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      */}
 
       {/* Team Grid */}
       <section className="py-16 px-6 bg-gradient-to-b from-background to-card/50" id="us">
