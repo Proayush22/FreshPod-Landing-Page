@@ -5,6 +5,11 @@ import { Linkedin, Twitter, Rocket, Award, Users, Lightbulb, Target, TrendingUp,
 import evolutionV1 from "@/assets/evolution-v0.png";
 import evolutionV2 from "@/assets/evolution-v1.png";
 import evolutionV3 from "@/assets/evolution-v2.png";
+import ayushHeadShot from "@/assets/Ayush Sinha HeadShot.png";
+import noamHeadShot from "@/assets/Noam G's Headshot.pdf";
+import carolHeadShot from "@/assets/Senior Picture.jpg";
+import emreHeadShot from "@/assets/EmreHeadShot.jpeg";
+import malakHeadShot from "@/assets/MalakHeadShot.jpg";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -16,32 +21,32 @@ const teamMembers = [
   {
     name: "Ayush Sinha",
     role: "CEO",
-    bio: "Former food scientist at Stanford. Passionate about reducing food waste through technology.",
-    image: "/assests/Ayush Sinha HeadShot.png",
+    bio: "Computer Science Student at Rutgers Univeristy.",
+    image: "ayushHeadShot",
   },
   {
     name: "Carol Johnson-Fish",
     role: "CMO",
-    bio: "Ex-Google engineer specializing in IoT and sensor technology. Built smart home devices used by millions.",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop&crop=face",
+    bio: "HR & Psychology Student at Rutgers University.",
+    image: "caroldHeadShot",
   },
   {
     name: "Emre Ekin",
-    role: "COO",
-    bio: "15 years in consumer electronics. Previously led hardware teams at Nest and Apple.",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop&crop=face",
+    role: "CTO",
+    bio: "Honors Biochemistry Student at Rutgers University.",
+    image: "emreHeadShot",
   },
   {
     name: "Malak Shatlh",
     role: "CFO",
-    bio: "Product design veteran focused on creating intuitive user experiences for smart home devices.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+    bio: "Student at Rutgers University.",
+    image: "malakHeadShot",
   },
   {
     name: "Noam Gold",
-    role: "CTO",
-    bio: "Product design veteran focused on creating intuitive user experiences for smart home devices.",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=300&h=300&fit=crop&crop=face",
+    role: "COO",
+    bio: "Honors Materials Engineering Student at Rutgers University.",
+    image: "noamHeadShot",
   },
 ];
 
