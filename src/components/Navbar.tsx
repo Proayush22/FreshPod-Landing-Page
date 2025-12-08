@@ -47,7 +47,7 @@ const Navbar = () => {
                 <a href="#app" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Our App
                 </a>
-                <Link to="/team" className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}>
+                <Link to="/team#about" className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}>
                   About Us
                 </Link>
 
