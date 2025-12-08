@@ -34,7 +34,7 @@ const Footer = () => {
           </nav>
           
           <p className="text-sm text-muted-foreground">
-            © 2025 <a href="/" className="bg-gradient-to-r from-green-300 to-green-400 bg-clip-text text-transparent font-bold hover:opacity-80 transition-opacity">FreshPod.</a> All rights reserved. 
+            © 2025 <a className="bg-gradient-to-r from-green-300 to-green-400 bg-clip-text text-transparent font-bold hover:opacity-80 transition-opacity">FreshPod.</a> All rights reserved. 
           </p>
           
         </div>
