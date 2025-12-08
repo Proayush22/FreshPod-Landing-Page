@@ -1,10 +1,55 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { Input } from "@/components/ui/input";
+import { ArrowRight, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const CTASection = () => {
+  const [email, setEmail] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleWaitlistSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!email || !email.includes("@")) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact", {
+        body: { type: "waitlist", email },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "You're on the list!",
+        description: "We'll notify you when FreshPod launches.",
+      });
+      setEmail("");
+    } catch (error: any) {
+      console.error("Error submitting waitlist:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="py-24 px-6 relative overflow-hidden" id="cta">
       {/* Background glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-fresh/10 rounded-full blur-[150px]" />
       
@@ -36,18 +81,33 @@ const CTASection = () => {
             Early supporters get exclusive pricing and priority shipping.
           </motion.p>
           
-          <motion.div 
-            className="flex flex-col sm:flex-row gap-4 justify-center"
+          <motion.form 
+            className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
+            onSubmit={handleWaitlistSubmit}
           >
-            <Button variant="hero" className="group">
-              Join Waitlist
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            <Input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="flex-1 bg-background/50 border-border"
+              disabled={isLoading}
+            />
+            <Button variant="hero" className="group" type="submit" disabled={isLoading}>
+              {isLoading ? (
+                <Loader2 className="w-4 h-4 animate-spin" />
+              ) : (
+                <>
+                  Join Waitlist
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                </>
+              )}
             </Button>
-          </motion.div>
+          </motion.form>
           
           <motion.p 
             className="text-sm text-muted-foreground mt-6"
