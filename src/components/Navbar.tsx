@@ -54,9 +54,11 @@ const Navbar = () => {
               </>
             ) : (
               <>
+              {/*
                 <Link to="/" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Home
                 </Link>
+                */}
 
                 <Link to="/team#about" className={`text-sm transition-colors ${location.pathname === "/team" ? "text-fresh font-medium" : "text-muted-foreground hover:text-foreground"}`}>
                   About Us
