@@ -250,7 +250,7 @@ const ContactSection = () => {
               </Button>
             </form>
           </motion.div>
-
+          {/*
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: 40 }}
@@ -301,6 +301,7 @@ const ContactSection = () => {
               </div>
             </div>
           </motion.div>
+          */}
         </div>
       </div>
     </section>
