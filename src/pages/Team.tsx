@@ -17,7 +17,7 @@ const teamMembers = [
     name: "Ayush Sinha",
     role: "CEO",
     bio: "Former food scientist at Stanford. Passionate about reducing food waste through technology.",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face",
+    image: "/assests/Ayush Sinha HeadShot.png",
   },
   {
     name: "Carol Johnson-Fish",
