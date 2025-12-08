@@ -51,7 +51,7 @@ const teamMembers = [
     role: "COO",
     bio: "Pre-Medicine Student at Rutgers University.",
     image: "malakHeadShot",
-    linkedin: "https://www.linkedin.com/in/malak-shatlh-049a48281/"
+    linkedin: "https://media.licdn.com/dms/image/v2/D4E35AQFexO8Czsv2kA/profile-framedphoto-shrink_800_800/B4EZhPF_nxGYAg-/0/1753673628441?e=1765778400&v=beta&t=jHVT0bLORk-V2PPtj4aF2XRptpgK04Wyv0qz8oJkY3s"
   },
 ];
 
