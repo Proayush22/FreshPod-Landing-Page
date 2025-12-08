@@ -22,31 +22,36 @@ const teamMembers = [
     name: "Ayush Sinha",
     role: "CEO",
     bio: "Computer Science Student at Rutgers Univeristy.",
-    image: "ayushHeadShot",
+    image: "@/assets/Ayush Sinha HeadShot.png",
+    linkedin: "https://www.linkedin.com/in/ayush-si-nha"
   },
   {
     name: "Carol Johnson-Fish",
     role: "CMO",
     bio: "HR & Psychology Student at Rutgers University.",
     image: "caroldHeadShot",
+    linkedin: "https://www.linkedin.com/in/carol-johnson-fish"
   },
   {
     name: "Emre Ekin",
     role: "CTO",
     bio: "Honors Biochemistry Student at Rutgers University.",
     image: "emreHeadShot",
-  },
-  {
-    name: "Malak Shatlh",
-    role: "CFO",
-    bio: "Student at Rutgers University.",
-    image: "malakHeadShot",
+    linkedin: "https://www.linkedin.com/in/emre-ekin-435a96321/"
   },
   {
     name: "Noam Gold",
-    role: "COO",
+    role: "CFO",
     bio: "Honors Materials Engineering Student at Rutgers University.",
     image: "noamHeadShot",
+    linkedin: "https://www.linkedin.com/in/noam-gold-293470361/"
+  },
+  {
+    name: "Malak Shatlh",
+    role: "COO",
+    bio: "Pre-Medicine Student at Rutgers University.",
+    image: "malakHeadShot",
+    linkedin: "https://www.linkedin.com/in/malak-shatlh-049a48281/"
   },
 ];
 
@@ -527,12 +532,14 @@ const Team = () => {
                 <p className="text-fresh text-sm font-medium mb-3">{member.role}</p>
                 <p className="text-muted-foreground text-sm mb-4">{member.bio}</p>
                 <div className="flex justify-center gap-3">
-                  <a href="#" className="text-muted-foreground hover:text-fresh transition-colors">
+                  <a href="{member.linkedin}" target="_blank" className="text-muted-foreground hover:text-fresh transition-colors">
                     <Linkedin className="w-4 h-4" />
                   </a>
+                  {/*
                   <a href="#" className="text-muted-foreground hover:text-fresh transition-colors">
                     <Twitter className="w-4 h-4" />
                   </a>
+                  */}
                 </div>
               </motion.div>
             ))}
