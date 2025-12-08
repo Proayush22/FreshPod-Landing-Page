@@ -1,10 +1,16 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Linkedin, Twitter, Rocket, Award, Users, Lightbulb, Target, TrendingUp } from "lucide-react";
+import { Linkedin, Twitter, Rocket, Award, Users, Lightbulb, Target, TrendingUp, Loader2, Mail, MapPin, Phone } from "lucide-react";
 import evolutionV1 from "@/assets/evolution-v0.png";
 import evolutionV2 from "@/assets/evolution-v1.png";
 import evolutionV3 from "@/assets/evolution-v2.png";
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const teamMembers = [
   {
@@ -111,6 +117,195 @@ const milestones = [
     side: "left" as const,
   },
 ];
+
+const ContactSection = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!email || !email.includes("@")) {
+      toast({
+        title: "Invalid email",
+        description: "Please enter a valid email address.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    if (!name.trim()) {
+      toast({
+        title: "Name required",
+        description: "Please enter your name.",
+        variant: "destructive",
+      });
+      return;
+    }
+
+    setIsLoading(true);
+    try {
+      const { error } = await supabase.functions.invoke("send-contact", {
+        body: { type: "contact", name, email, message },
+      });
+
+      if (error) throw error;
+
+      toast({
+        title: "Message sent!",
+        description: "We'll get back to you soon.",
+      });
+      setName("");
+      setEmail("");
+      setMessage("");
+    } catch (error: any) {
+      console.error("Error submitting contact:", error);
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <section className="py-24 px-6 bg-gradient-to-b from-card/50 to-background" id="contact">
+      <div className="container mx-auto max-w-7xl">
+        <motion.div
+          className="text-center mb-12"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Contact <span className="text-gradient-fresh">Us</span>
+          </h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Have questions? We'd love to hear from you.
+          </p>
+        </motion.div>
+
+        <div className="grid lg:grid-cols-2 gap-12">
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div>
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  Name
+                </label>
+                <Input
+                  id="name"
+                  type="text"
+                  placeholder="Your name"
+                  value={name}
+                  onChange={(e) => setName(e.target.value)}
+                  disabled={isLoading}
+                  className="bg-card border-border"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  Email
+                </label>
+                <Input
+                  id="email"
+                  type="email"
+                  placeholder="your@email.com"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  disabled={isLoading}
+                  className="bg-card border-border"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message
+                </label>
+                <Textarea
+                  id="message"
+                  placeholder="Tell us how we can help..."
+                  value={message}
+                  onChange={(e) => setMessage(e.target.value)}
+                  disabled={isLoading}
+                  rows={5}
+                  className="bg-card border-border resize-none"
+                />
+              </div>
+              <Button type="submit" variant="default" className="w-full" disabled={isLoading}>
+                {isLoading ? (
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                ) : (
+                  "Send Message"
+                )}
+              </Button>
+            </form>
+          </motion.div>
+
+          <motion.div
+            className="space-y-8"
+            initial={{ opacity: 0, x: 40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="bg-card border border-border rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-fresh/10 border border-fresh/30 flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-5 h-5 text-fresh" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Email</h3>
+                  <p className="text-muted-foreground text-sm">ayush.sinha.25@outlook.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-fresh/10 border border-fresh/30 flex items-center justify-center flex-shrink-0">
+                  <MapPin className="w-5 h-5 text-fresh" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Location</h3>
+                  <p className="text-muted-foreground text-sm">Rutgers University<br />New Brunswick, NJ</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-card border border-border rounded-2xl p-6">
+              <div className="flex items-start gap-4">
+                <div className="w-10 h-10 rounded-full bg-fresh/10 border border-fresh/30 flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-5 h-5 text-fresh" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Follow Us</h3>
+                  <div className="flex gap-3 mt-2">
+                    <a href="#" className="text-muted-foreground hover:text-fresh transition-colors">
+                      <Linkedin className="w-5 h-5" />
+                    </a>
+                    <a href="#" className="text-muted-foreground hover:text-fresh transition-colors">
+                      <Twitter className="w-5 h-5" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 const Team = () => {
   return (
@@ -397,7 +592,9 @@ const Team = () => {
           </div>
         </div>
       </section>
-      
+
+      {/* Contact Us Section */}
+      <ContactSection />
 
       <Footer />
     </div>
