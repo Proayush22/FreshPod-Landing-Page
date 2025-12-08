@@ -13,7 +13,7 @@ const Footer = () => {
           */}
 
           <p className="text-sm text-muted-foreground">
-            Created by <a href="https://cloudcores.org" target="_blank" className="link-fancy link-fancy-light hover:text-foreground ">CloudCores</a>
+            Created by <a href="https://cloudcores.org" target="_blank" className="link-fancy link-fancy-light bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent font-bold hover:opacity-80 transition-opacity">CloudCores</a>
 
           </p>
 
