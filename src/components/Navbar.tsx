@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import freshpodLogo from "@/assets/freshpod-logo-new.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -11,25 +12,13 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
 
           {isHomePage ? (
-            <>
-              <Link to="#top" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-                <div className="w-8 h-8 rounded-lg bg-fresh flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-sm">FP</span>
-                </div>
-                <span className="font-semibold text-lg">FreshPod</span>
-              </Link>
-
-            </>
-          ): (
-            <>
-              <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <div className="w-8 h-8 rounded-lg bg-fresh flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">FP</span>
-              </div>
-              <span className="font-semibold text-lg">FreshPod</span>
+            <Link to="#top" className="flex items-center hover:opacity-80 transition-opacity">
+              <img src={freshpodLogo} alt="FreshPod Logo" className="h-10" />
             </Link>
-
-            </>
+          ): (
+            <Link to="/" className="flex items-center hover:opacity-80 transition-opacity">
+              <img src={freshpodLogo} alt="FreshPod Logo" className="h-10" />
+            </Link>
           )}
           
           <div className="hidden md:flex items-center gap-8">
